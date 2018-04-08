@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import CountLabel from './counterLabel';
-import { incrementCounter } from './actions';
+import { incrementCounter } from '../actions/actions';
 
 const mapDispatchToProps = dispatch => {
   return {
