@@ -1,12 +1,21 @@
-import React from 'react';
-import {Text} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
   return { count: state };
 };
 
-const ConnectedCountLabel = ({ count }) => <Text>{count}</Text>;
+class ConnectedCountLabel extends Component {
+
+  render() {
+    return (
+      <View>
+        <Text>{this.props.count}</Text>
+      </View>
+    );
+  }
+}
 
 const CountLabel = connect(mapStateToProps)(ConnectedCountLabel);
 

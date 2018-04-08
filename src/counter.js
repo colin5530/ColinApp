@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import { Button, View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import CountLabel from './counterLabel';
 import { incrementCounter } from './actions';
@@ -23,8 +23,8 @@ class ConnectedCounter extends Component {
   render() {
     return (
       <View>
-        <button onClick={this.handleClick}>Click Me</button>
-        Count: <CountLabel />
+        <Button title="Click Me" onPress={this.handleClick}/>
+        <Text>Count: </Text><CountLabel />
       </View>
     );
   }
